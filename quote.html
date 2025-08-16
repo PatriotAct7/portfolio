@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 60px; background:#f7f9fc; }
+    #quote { font-size: 20px; margin: 20px auto; width: 60%; }
+    button { padding: 10px 18px; margin-top: 14px; cursor: pointer; }
+    a { display:block; margin-top:30px; color:#0a66c2; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <h2>💡 Random Quote Generator</h2>
+  <p id="quote">Click the button to get inspired.</p>
+  <button onclick="newQuote()">Get Quote</button>
+
+  <a href="./">← Back to Portfolio</a>
+
+  <script>
+    const quotes = [
+      "Stay hungry, stay foolish.",
+      "Code is like humor. When you have to explain it, it’s bad.",
+      "First, solve the problem. Then, write the code.",
+      "Your limitation—it’s only your imagination.",
+      "Push yourself, because no one else is going to do it for you."
+    ];
+    function newQuote() {
+      const q = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quote").textContent = q;
+    }
+  </script>
+</body>
+</html>
