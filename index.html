@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Your Name] — Portfolio</title>
+  <style>
+    :root { --w: 880px; --pad: 18px; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, Arial, sans-serif; margin:0; color:#222; background:#f7f9fc; }
+    header { background:#0a66c2; color:#fff; padding:48px 16px; }
+    header .wrap { max-width:var(--w); margin:0 auto; }
+    h1 { margin:0 0 8px; font-size:34px; }
+    p.subtitle { margin:0; opacity:.9 }
+    main { max-width:var(--w); margin: -24px auto 40px; padding:0 16px; }
+    .card { background:#fff; border:1px solid #e6ebf2; border-radius:14px; padding:var(--pad); margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.04); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:14px; }
+    .pill { display:inline-block; padding:6px 10px; border:1px solid #dfe7f3; border-radius:999px; font-size:12px; margin-right:6px; }
+    a.button { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid #0a66c2; text-decoration:none; }
+    a.button:hover { background:#0a66c2; color:#fff; }
+    footer { text-align:center; color:#667; padding:24px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>👋 Hi, I’m [Your Name]</h1>
+      <p class="subtitle">New builder on GitHub. Here are a few small projects while I level up.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>About</h2>
+      <p>I’m exploring web apps, Python scripts, and creative tech. Open to collabs & feedback.</p>
+      <div>
+        <span class="pill">HTML/CSS</span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">Python</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>✅ To-Do App</h3>
+        <p>Simple browser to-do list with no libraries.</p>
+        <a class="button" href="#">View (coming soon)</a>
+      </div>
+      <div class="card">
+        <h3>💡 Random Quote</h3>
+        <p>Tiny Python script that prints a quote.</p>
+        <a class="button" href="#">View (coming soon)</a>
+      </div>
+      <div class="card">
+        <h3>☁️ Weather Mini-App</h3>
+        <p>Fetches a quick weather line from wttr.in</p>
+        <a class="button" href="#">View (coming soon)</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a> • GitHub: <a href="https://github.com/YOUR-USERNAME">YOUR-USERNAME</a></p>
+    </div>
+  </main>
+
+  <footer>© <span id="y"></span> [Your Name]</footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
